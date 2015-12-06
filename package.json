@@ -1,10 +1,11 @@
 {
   "version": "1.0.0",
   "private": true,
-  "name": "learning module application",
+  "name": "learningAI",
   "description": "A client to learn AI",
   "main": "index.js",
   "devDependencies": {
+	"http-server": "^0.6.1",
     "bower": "^1.3.1",
 	"ejs": "2.3.3",
     "express": "4.13.3"
