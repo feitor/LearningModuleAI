@@ -1,15 +1,13 @@
 {
-    "version": "0.0.0",
+    "version": "1.0.0",
     "private": true,
     "name": "WebRtcApp",
     "description": "A server webRtc",
     "devDependencies": {
         "express": "~4.13.1",
         "ws": "latest"
-
     },
     "scripts": {
-
         "start": "node site/server.js"
     }
 }
