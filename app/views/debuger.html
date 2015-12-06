@@ -1,0 +1,45 @@
+﻿
+<div style="margin:30px 50px 30px 50px;">
+    <div >
+        This tool is a simulation of a step by step debugger.
+        Its goal is to illustrate the execution of the following pseudo code on a simple example. <br />
+        You will have all the variables of the current at the middle up of your screen.
+
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div ng-class="{highlight : codeUnderligne[currentPtr] == $index}" ng-repeat="line in code track by $index"><xmp>{{$index}}  {{line}}</xmp></div>
+        </div>
+        <div class="col-md-6">
+            <img class="img-responsive" src="{{images[currentPtr]}}" />
+        </div>
+    </div>
+    <div class="row">
+        <span class="col-md-6">
+            <button ng-click="currentPtr=0" ng-disabled="currentPtr==0">beginning</button>
+            <button ng-click="currentPtr=currentPtr-1" ng-disabled="currentPtr==0">previous</button>
+        </span>
+        <span class="col-md-6" ng-hide="questions[questionPtr].line === currentPtr">
+            <span style="color:green">{{message}}</span>
+            <span class="pull-right">
+
+                <button ng-click="currentPtr=currentPtr+1" ng-disabled="currentPtr==codeUnderligne.length-1">next</button>
+                <!--<button ng-click="currentPtr=codeUnderligne.length-1" ng-disabled="currentPtr==codeUnderligne.length-1">{{currentPtr}}</button>-->
+            </span>
+
+        </span>
+        <div class="col-md-6" ng-show="questions[questionPtr].line === currentPtr">
+            <form>
+                <div>
+                    <span>
+                        {{questions[questionPtr].question}}
+                        <input type="text" ng-model="answer" />
+                        <input type="submit" ng-click="submitAnswer()" value="OK" />
+                        <span style="color:red">{{message}}</span>
+                    </span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>

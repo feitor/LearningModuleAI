@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html data-ng-app="learningTechApp">
+<head>
+    <title>Dynamic example</title>
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="app/css/app.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="row" style="margin-top:100px">
+        <div data-ng-view="">
+        </div>
+    </div>
+
+    <!-- 3rd party libraries -->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+
+
+    <!-- Load app main script -->
+    <script src="app/app.js"></script>
+
+    <!-- Load controllers -->
+    <script src="app/controllers/greedyController.js"></script>
+    <script src="app/controllers/minmaxController.js"></script>
+    <script src="app/controllers/alphabetaController.js"></script>
+
+    <!-- Load directives -->
+    <script src="app/Directives/debugerDirective.js"></script>
+</body>
+</html>
