@@ -112,7 +112,7 @@
 
     $scope.images = [];
     for (var i = 0; i < $scope.codeUnderligne.length; i++) {
-        $scope.images.push("app/images/alphabeta/" + i + ".png")
+        $scope.images.push("app/images/AlphaBeta/" + i + ".png")
     }
     
 
